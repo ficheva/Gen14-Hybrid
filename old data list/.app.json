@@ -8,9 +8,46 @@
       "title": "Home View",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "dataListView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:list",
+          "name": "dataListViewModel",
+          "dataProvider": "oldDataList",
+          "collection": "Activities",
+          "iconField": true,
+          "imageField": "Picture",
+          "headerField": "Text",
+          "subHeaderField": "UserId",
+          "filterField": "Text",
+          "masterDetails": true,
+          "detailHeaderField": "Text",
+          "detailSubHeaderField": "UserId",
+          "detailDescriptionField": "Text",
+          "detailImageField": "Picture",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Data List",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "oldDataList",
+      "everliveUrl": "//testtap.telerik.com/bs-api/v1/",
+      "title": "old data list / old data list",
+      "source": "everlive",
+      "everliveKey": "2so1y8z6xw1b9new",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",
